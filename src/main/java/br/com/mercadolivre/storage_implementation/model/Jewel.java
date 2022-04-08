@@ -17,7 +17,7 @@ public class Jewel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Enumerated(EnumType.STRING)
+    @ManyToOne
     private Material material;
 
     private Double weight;
