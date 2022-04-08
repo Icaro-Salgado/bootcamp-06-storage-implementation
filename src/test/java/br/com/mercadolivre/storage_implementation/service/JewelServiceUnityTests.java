@@ -1,11 +1,14 @@
 package br.com.mercadolivre.storage_implementation.service;
 
+import br.com.mercadolivre.storage_implementation.exception.JewelNotFoundException;
 import br.com.mercadolivre.storage_implementation.model.Jewel;
 import br.com.mercadolivre.storage_implementation.repository.JewelRepository;
 import org.junit.jupiter.api.*;
+import org.mockito.Mock;
 import org.mockito.Mockito;
 
 import java.util.List;
+import java.util.Optional;
 
 public class JewelServiceUnityTests {
 
@@ -42,22 +45,53 @@ public class JewelServiceUnityTests {
     @Test
     @DisplayName("Test if find by id returns the right jewel")
     public void testIfFindByIdReturnRightJewel(){
+        // SETUP
+        Jewel expectedJewel = Jewel.builder().id(1L).weight(12.0).carats(18.0).build();
+
+        Mockito.when(this.jewelRepository.findById(1L)).thenReturn(Optional.of(expectedJewel));
+
+        // ACT
+        Jewel responseJewel = this.jewelService.findJewelById(1L);
+
+        // ASSERT
+        Assertions.assertEquals(expectedJewel, responseJewel);
     }
 
     @Test
     @DisplayName("Test if find by with not found id raises right exception")
     public void testIfFindByIdRaisesRightException(){
+        // SETUP
+        Mockito.when(this.jewelRepository.findById(Mockito.any())).thenReturn(Optional.empty());
+
+        // ACT / ASSERT
+        Assertions.assertThrows(JewelNotFoundException.class, () -> this.jewelService.findJewelById(1L));
     }
 
 
     @Test
     @DisplayName("Test if add jewel return the right id")
-    public void testIfaddJewelReturnsRightId(){
+    public void testIfAddJewelReturnsRightId(){
+        // SETUP
+        Jewel expectedJewel = Jewel.builder().id(123L).build();
+
+        Mockito.when(this.jewelRepository.save(Mockito.any())).thenReturn(expectedJewel);
+
+        // ACT
+        Long addedJewelId = this.jewelService.addJewel(Jewel.builder().build());
+
+        // ASSERT
+        Assertions.assertEquals(expectedJewel.getId(), addedJewelId);
     }
 
     @Test
     @DisplayName("Test if delete existent jewel calls delete method")
     public void testIfDeleteExistentJewelCallsDeleteMethod(){
+        // SETUP
+        Mockito.when(this.jewelRepository.findById(Mockito.any())).thenReturn(Optional.of(Jewel.builder().build()));
+
+        // ACT
+
+        // ASSERT
     }
 
     @Test
