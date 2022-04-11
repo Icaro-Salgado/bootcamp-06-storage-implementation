@@ -90,12 +90,22 @@ public class JewelServiceUnityTests {
         Mockito.when(this.jewelRepository.findById(Mockito.any())).thenReturn(Optional.of(Jewel.builder().build()));
 
         // ACT
+        this.jewelService.deleteJewel(1L);
 
         // ASSERT
+        Mockito.verify(this.jewelRepository, Mockito.times(1)).delete(Mockito.any());
     }
 
     @Test
     @DisplayName("Test if delete not existent jewel doesn't call delete method")
     public void testIfDeleteNotExistentJewelDoesntCallDeleteMethod(){
+        // SETUP
+        Mockito.when(this.jewelRepository.findById(Mockito.any())).thenReturn(Optional.empty());
+
+        // ACT
+        this.jewelService.deleteJewel(1L);
+
+        // ASSERT
+        Mockito.verify(this.jewelRepository, Mockito.times(0)).delete(Mockito.any());
     }
 }
