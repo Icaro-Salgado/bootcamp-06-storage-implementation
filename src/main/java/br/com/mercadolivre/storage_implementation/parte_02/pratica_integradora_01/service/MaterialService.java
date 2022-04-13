@@ -1,7 +1,7 @@
-package br.com.mercadolivre.storage_implementation.parte_02_pratica_integradora_01.service;
+package br.com.mercadolivre.storage_implementation.parte_02.pratica_integradora_01.service;
 
-import br.com.mercadolivre.storage_implementation.parte_02_pratica_integradora_01.model.Material;
-import br.com.mercadolivre.storage_implementation.parte_02_pratica_integradora_01.repository.MaterialRepository;
+import br.com.mercadolivre.storage_implementation.parte_02.pratica_integradora_01.repository.MaterialRepository;
+import br.com.mercadolivre.storage_implementation.parte_02.pratica_integradora_01.model.Material;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

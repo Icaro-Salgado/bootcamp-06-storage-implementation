@@ -1,7 +1,7 @@
-package br.com.mercadolivre.storage_implementation.parte_02_pratica_integradora_01.controller;
+package br.com.mercadolivre.storage_implementation.parte_02.pratica_integradora_01.controller;
 
-import br.com.mercadolivre.storage_implementation.parte_02_pratica_integradora_01.model.Jewel;
-import br.com.mercadolivre.storage_implementation.parte_02_pratica_integradora_01.service.JewelService;
+import br.com.mercadolivre.storage_implementation.parte_02.pratica_integradora_01.model.Jewel;
+import br.com.mercadolivre.storage_implementation.parte_02.pratica_integradora_01.service.JewelService;
 import java.net.URI;
 import java.util.List;
 import lombok.RequiredArgsConstructor;

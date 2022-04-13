@@ -1,8 +1,8 @@
-package br.com.mercadolivre.storage_implementation.parte_02_pratica_integradora_01.service;
+package br.com.mercadolivre.storage_implementation.parte_02.pratica_integradora_01.service;
 
-import br.com.mercadolivre.storage_implementation.parte_02_pratica_integradora_01.exception.JewelNotFoundException;
-import br.com.mercadolivre.storage_implementation.parte_02_pratica_integradora_01.model.Jewel;
-import br.com.mercadolivre.storage_implementation.parte_02_pratica_integradora_01.repository.JewelRepository;
+import br.com.mercadolivre.storage_implementation.parte_02.pratica_integradora_01.exception.JewelNotFoundException;
+import br.com.mercadolivre.storage_implementation.parte_02.pratica_integradora_01.model.Jewel;
+import br.com.mercadolivre.storage_implementation.parte_02.pratica_integradora_01.repository.JewelRepository;
 import org.junit.jupiter.api.*;
 import org.mockito.Mockito;
 

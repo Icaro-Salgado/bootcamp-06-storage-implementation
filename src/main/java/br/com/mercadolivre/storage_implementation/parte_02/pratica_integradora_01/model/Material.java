@@ -1,4 +1,4 @@
-package br.com.mercadolivre.storage_implementation.parte_02_pratica_integradora_01.model;
+package br.com.mercadolivre.storage_implementation.parte_02.pratica_integradora_01.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

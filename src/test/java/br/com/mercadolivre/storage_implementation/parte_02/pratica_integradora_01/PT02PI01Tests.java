@@ -1,4 +1,4 @@
-package br.com.mercadolivre.storage_implementation.parte_02_pratica_integradora_01;
+package br.com.mercadolivre.storage_implementation.parte_02.pratica_integradora_01;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
