@@ -1,6 +1,7 @@
 package br.com.mercadolivre.storage_implementation.parte_03.pratica_integradora_01.model;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -11,6 +12,7 @@ import java.util.Date;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class TestCase {
 
     @Id
@@ -30,5 +32,5 @@ public class TestCase {
     private int number_of_tries;
 
     @Column
-    private Date last_update = new Date();
+    private Date lastUpdate = new Date();
 }

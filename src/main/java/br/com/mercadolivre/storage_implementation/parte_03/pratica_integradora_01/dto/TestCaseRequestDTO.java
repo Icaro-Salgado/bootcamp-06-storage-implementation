@@ -4,7 +4,7 @@ import br.com.mercadolivre.storage_implementation.parte_03.pratica_integradora_0
 
 import java.util.Date;
 
-public class TestCaseToBeCreatedDTO {
+public class TestCaseRequestDTO {
 
     private String description;
     private boolean tested;
@@ -19,7 +19,19 @@ public class TestCaseToBeCreatedDTO {
                 .tested(this.tested)
                 .passed(this.passed)
                 .number_of_tries(this.number_of_tries)
-                .last_update(this.last_update)
+                .lastUpdate(this.last_update)
+                .build();
+    }
+
+    public TestCase toModel(Long id) {
+        return TestCase
+                .builder()
+                .id_case(id)
+                .description(this.description)
+                .tested(this.tested)
+                .passed(this.passed)
+                .number_of_tries(this.number_of_tries)
+                .lastUpdate(this.last_update)
                 .build();
     }
 }
