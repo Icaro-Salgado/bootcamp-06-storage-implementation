@@ -13,24 +13,18 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class TestCase {
+public class Tutorial {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id_case;
+    private Long id;
+
+    @Column
+    private String title;
 
     @Column
     private String description;
 
     @Column
-    private boolean tested;
-
-    @Column
-    private boolean passed;
-
-    @Column
-    private int number_of_tries;
-
-    @Column
-    private Date lastUpdate = new Date();
+    private boolean published;
 }

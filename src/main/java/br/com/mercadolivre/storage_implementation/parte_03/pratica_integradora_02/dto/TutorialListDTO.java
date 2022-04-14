@@ -7,6 +7,6 @@ import java.util.List;
 
 @Data
 @AllArgsConstructor
-public class TestCaseListDTO {
-    List<TestCaseResponseDTO> testCaseResponseDTOList;
+public class TutorialListDTO {
+    List<TutorialResponseDTO> tutorialResponseDTOList;
 }
