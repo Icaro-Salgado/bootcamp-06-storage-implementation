@@ -15,9 +15,9 @@ disponíveis para quando quiser consultá-los novamente. Para fazer isso, você 
 implementar um serviço REST que permite alcançá-lo.
 
 Uma entidade chamada “Tutorial” deve ser criada com os seguintes atributos:
-- ID do tutorial.
-- Título do tutorial.
-- Descrição do tutorial.
+- ID do movies.
+- Título do movies.
+- Descrição do movies.
 - Situação da publicação.
 
 A API deve ser capaz de:
@@ -29,9 +29,9 @@ Endpoints que se deben desarrollar:
    
 MÉTODO | URI | AÇÃO
 ------ | --- | ----
-POST | /api/tutorials |Crie um novo Tutorial.
-GET | /api/tutorials |Retorne todos os tutoriais.
-GET | /api/tutorials/id |Retornar um tutorial por id.
-PUT | /api/tutorials/id |Atualizar um tutorial por id.
-DELETE | /api/tutorials |Excluir todos os tutoriais   
-DELETE | /api/tutorials/id | Excluir um tutorial por id
+POST | /api/movies |Crie um novo Tutorial.
+GET | /api/movies |Retorne todos os tutoriais.
+GET | /api/movies/id |Retornar um movies por id.
+PUT | /api/movies/id |Atualizar um movies por id.
+DELETE | /api/movies |Excluir todos os tutoriais   
+DELETE | /api/movies/id | Excluir um movies por id

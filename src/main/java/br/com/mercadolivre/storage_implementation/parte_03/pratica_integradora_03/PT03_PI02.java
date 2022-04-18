@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class PT03_PI02 {
-  public static void main(String[] args) {
-    SpringApplication.run(PT03_PI02.class, args);
-  }
+    public static void main(String[] args) {
+        SpringApplication.run(PT03_PI02.class, args);
+    }
 }

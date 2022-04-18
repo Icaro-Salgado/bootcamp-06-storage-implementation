@@ -33,5 +33,5 @@ POST | /api/testcases/new |Crie um novo caso de teste.
 GET | /api/testcases |Retorne todos os casos de teste.
 GET | /api/testcases/id |Retornar um caso de teste por id.
 PUT | /api/testcases/id |Atualizar um caso de teste por id.
-DELETE | /api/testcases/id |Excluir um tutorial por id.   
+DELETE | /api/testcases/id |Excluir um movies por id.   
 GET | /api/testcases?last_update=’dd/mm/yyyy’ |Encontre todos os casos de teste que foram atualizados após umadeterminada data.
