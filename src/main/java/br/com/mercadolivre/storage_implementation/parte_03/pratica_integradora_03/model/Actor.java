@@ -2,6 +2,7 @@ package br.com.mercadolivre.storage_implementation.parte_03.pratica_integradora_
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.CreatedDate;
@@ -9,12 +10,12 @@ import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
-import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
 @Entity
 @Data
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @EntityListeners(AuditingEntityListener.class)
@@ -31,11 +32,10 @@ public class Actor {
     private String lastName;
 
     @Column
-    private BigDecimal rating;
+    private Double rating;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "favorite_movie_id")
-    private Movie favoriteMovieId;
+    @ManyToOne
+    private Movie favoriteMovie;
 
     @ManyToMany(mappedBy = "actors")
     @JsonIgnoreProperties(value = "actors")
@@ -49,10 +49,10 @@ public class Actor {
     @Temporal(TemporalType.TIMESTAMP)
     private Date updatedAt;
 
-    public Actor(String firstName, String lastName, BigDecimal rating, Movie favoriteMovieId) {
+    public Actor(String firstName, String lastName, Double rating, Movie favoriteMovie) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.rating = rating;
-        this.favoriteMovieId = favoriteMovieId;
+        this.favoriteMovie = favoriteMovie;
     }
 }
