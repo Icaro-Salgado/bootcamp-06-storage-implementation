@@ -12,13 +12,13 @@ Conclua o passo a passo adicionando os serviços necessários e as camadas do
 controlador para adicionar um documento do tipo artigo. Você precisará passar um JSON
 com o seguinte formato:
 
-![img.png](img.png)
+![img.png](doc/img/img.png)
 
 E a resposta deve ser:
 
-![img_1.png](img_1.png)
+![img_1.png](doc/img/img_1.png)
 
 Observar que:
 - O ID é aquele gerado pelo mecanismo Elasticsearch.
 - Observe após carregar alguns artigos que se entrarem em http://localhost:9200/_cat/indices poderão observar o índice criado
-![img_2.png](img_2.png)
+![img_2.png](doc/img/img_2.png)
